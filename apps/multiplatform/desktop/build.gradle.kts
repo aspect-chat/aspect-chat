@@ -155,7 +155,7 @@ afterEvaluate {
     dependsOn("cmakeBuild")
     doLast {
       copy {
-        from("${project(":desktop").buildDir}/cmake/main/linux-amd64")
+        from("${project(":desktop").layout.buildDirectory}/cmake/main/linux-amd64")
         into("$cppPath/desktop/libs/linux-x86_64")
         include("*.so*")
         eachFile {
@@ -165,7 +165,7 @@ afterEvaluate {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
       }
       copy {
-        from("${project(":desktop").buildDir}/cmake/main/linux-aarch64")
+        from("${project(":desktop").layout.buildDirectory}/cmake/main/linux-aarch64")
         into("$cppPath/desktop/libs/linux-aarch64")
         include("*.so*")
         eachFile {
@@ -175,7 +175,7 @@ afterEvaluate {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
       }
       copy {
-        from("${project(":desktop").buildDir}/cmake/main/windows-amd64")
+        from("${project(":desktop").layout.buildDirectory}/cmake/main/windows-amd64")
         into("$cppPath/desktop/libs/windows-x86_64")
         include("*.dll")
         eachFile {
@@ -185,7 +185,7 @@ afterEvaluate {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
       }
 	  copy {
-        from("${project(":desktop").buildDir}/cmake/main/windows-amd64")
+        from("${project(":desktop").layout.buildDirectory}/cmake/main/windows-amd64")
         into("../build/links/windows-x64")
         include("*.dll")
         eachFile {
@@ -195,7 +195,7 @@ afterEvaluate {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
       }
       copy {
-        from("${project(":desktop").buildDir}/cmake/main/mac-x86_64")
+        from("${project(":desktop").layout.buildDirectory}/cmake/main/mac-x86_64")
         into("$cppPath/desktop/libs/mac-x86_64")
         include("*.dylib")
         eachFile {
@@ -205,7 +205,7 @@ afterEvaluate {
         duplicatesStrategy = DuplicatesStrategy.INCLUDE
       }
       copy {
-        from("${project(":desktop").buildDir}/cmake/main/mac-aarch64")
+        from("${project(":desktop").layout.buildDirectory}/cmake/main/mac-aarch64")
         into("$cppPath/desktop/libs/mac-aarch64")
         include("*.dylib")
         eachFile {
