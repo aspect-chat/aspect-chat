@@ -52,3 +52,6 @@ result
 
 # Ignore test files
 apps/android/app/release
+
+#Ignore IDE
+.idea
